@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+    <style>
+        body{
+            background: rgb(56, 204, 160);
+            font: 16px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validação de Cidadania</h1>
+
+    Digite seu país de origem <input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verificar"  onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+
+        var txtp = window.document.querySelector('input#txtps')
+        var res = window.document.querySelector('div#res') 
+        var rsp = txtp.textContent
+            res.innerHTML = `Seu país de origem é ${rsp}`
+
+        }
+    </script>
+</body>
+</html>
